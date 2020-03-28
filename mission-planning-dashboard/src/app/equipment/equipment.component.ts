@@ -15,4 +15,9 @@ export class EquipmentComponent implements OnInit {
   addItem(item){
     this.equipmentList.push(item);
   }
+
+  removeItem(item){
+    const index = this.equipmentList.indexOf(item);
+    this.equipmentList.splice(index,1);
+  }
 }
