@@ -1,7 +1,18 @@
 <h3>Equipment</h3>
 <ul>
-    <li *ngFor='let item of equipmentList'>{{item}} <button (click)='removeItem(item)'>Remove</button></li>
+    <li *ngFor='let item of equipmentList'>
+        <span *ngIf='itemBeingEdited!==item; else editItemBlock' (click)="switchToEditBlock(item)">
+            {{item}} 
+        <button (click)='removeItem(item)'>Remove</button>
+        </span>
+    </li>
 </ul>
+
+<ng-template #editItemBlock>
+    <input #newItemName type='text' (keyup.enter)="editItem(itemBeingEdited, newItemName.value); itemBeingEdited=null" placeholder="Enter item's new name">
+     
+    <button (click)="editItem(itemBeingEdited, newItemName.value); itemBeingEdited=null">Save</button>
+</ng-template>
 
 <!-- user entry for equipmentList -->
 <input placeholder='New equipment here' type='text' #newItem (keyup.enter)='addItem(newItem.value); newItem.value=""'>

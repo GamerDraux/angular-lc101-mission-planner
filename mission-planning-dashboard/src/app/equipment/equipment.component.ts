@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
   equipmentList:Array=['Rubber Baby Boucy Buggies', 'Habitat Dome', 'Drones', 'Food Containers', 'Oxygen Tanks'];
+  itemBeingEdited=null;
+
   constructor() { }
 
   ngOnInit() {
@@ -19,5 +21,16 @@ export class EquipmentComponent implements OnInit {
   removeItem(item){
     const index = this.equipmentList.indexOf(item);
     this.equipmentList.splice(index,1);
+  }
+
+  switchToEditBlock(item){
+    this.itemBeingEdited=item;
+  }
+
+  editItem(item:string, newName:string){
+    if (newName!==""){
+      const index= this.equipmentList.indexOf(item);
+      this.equipmentList[index]=newName;
+    }
   }
 }
