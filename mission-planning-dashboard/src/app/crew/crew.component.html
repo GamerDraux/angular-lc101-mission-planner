@@ -1,7 +1,7 @@
 <h3>Crew</h3>
 <ul>
     <li *ngFor="let member of crew">
-        
+        <!-- printing member name -->
         <span (click)='edit(member)' *ngIf=
         'memberBeingEdited!==member; else changingCrewMemberNameBlock' >
             <span>{{member.name}} </span>
@@ -9,6 +9,7 @@
             <span><button (click)='removeCrewMember(member)'>Remove</button></span>
         </span>
        
+        <!-- block that allows for changing name already on list -->
         <ng-template #changingCrewMemberNameBlock>
             <span><input type='text' #newName (keyup.enter)='editName(member, newName.value); memberBeingEdited=null' placeholder='Enter new name'> </span>
             <button (click)='editName(member, newName.value);memberBeingEdited=null'>Save</button>
@@ -16,6 +17,8 @@
 
     </li>
 </ul>
+
+<!-- entry block for adding new Crew Members to list -->
 <input (keyup.enter)='addNewCrewMember(newMemberName.value, firstMission.checked)' type=text #newMemberName placeholder="New crew member name"> 
-<label>First Mission <input type="checkbox" #firstMission></label>
+<label style="color:white">First Mission? <input type="checkbox" #firstMission></label>
 <button (click)='addNewCrewMember(newMemberName.value,firstMission.checked)'>Add</button>
