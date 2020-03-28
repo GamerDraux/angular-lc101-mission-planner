@@ -5,4 +5,4 @@
 
 <!-- user entry for equipmentList -->
 <input placeholder='New equipment here' type='text' #newItem (keyup.enter)='addItem(newItem.value); newItem.value=""'>
-<button (click)='addItem(newItem.value)'>Add</button>
+<button (click)='addItem(newItem.value); newItem.value=""'>Add</button>
