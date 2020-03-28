@@ -15,5 +15,5 @@
 </ng-template>
 
 <!-- user entry for equipmentList -->
-<input placeholder='New equipment here' type='text' #newItem (keyup.enter)='addItem(newItem.value); newItem.value=""'>
+<input id="nameEntryField" placeholder='New equipment here' type='text' #newItem (keyup.enter)='addItem(newItem.value); newItem.value=""'>
 <button (click)='addItem(newItem.value); newItem.value=""'>Add</button>

@@ -14,5 +14,5 @@
 </ng-template>
 
 
-<input type='text' placeholder='Enter new experiment' #newExperiment (keyup.enter)="addExperiment(newExperiment.value); newExperiment.value=''">
+<input id="nameEntryField" type='text' placeholder='Enter new experiment' #newExperiment (keyup.enter)="addExperiment(newExperiment.value); newExperiment.value=''">
 <button (click)='addExperiment(newExperiment.value); newExperiment.value=""'>Add</button>

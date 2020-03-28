@@ -19,6 +19,6 @@
 </ul>
 
 <!-- entry block for adding new Crew Members to list -->
-<input (keyup.enter)='addNewCrewMember(newMemberName.value, firstMission.checked); newMemberName.value=""' type=text #newMemberName placeholder="New crew member name"> 
+<input id="nameEntryField" (keyup.enter)='addNewCrewMember(newMemberName.value, firstMission.checked); newMemberName.value=""' type=text #newMemberName placeholder="New crew member name"> 
 <label style="color:white">First Mission? <input type="checkbox" #firstMission></label>
 <button (click)='addNewCrewMember(newMemberName.value,firstMission.checked); newMemberName.value=""'>Add</button>
