@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor='let experiment of experimentList'>
         <span (click)='switchToEditBlock(experiment)' *ngIf='experimentBeingEdited!==experiment; else editExperimentBlock'>
-            {{experiment}}
+            {{experiment}} <button (click)='removeExperiment(experiment)'>Remove</button>
         </span>
 
     </li>

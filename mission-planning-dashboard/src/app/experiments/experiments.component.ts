@@ -27,4 +27,9 @@ export class ExperimentsComponent implements OnInit {
     const index = this.experimentList.indexOf(experimentBeingEdited);
     this.experimentList[index]=newName;
   }
+
+  removeExperiment(remove){
+    const index = this.experimentList.indexOf(remove);
+    this.experimentList.splice(index,1);
+  }
 }
