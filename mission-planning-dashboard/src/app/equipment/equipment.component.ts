@@ -15,7 +15,11 @@ export class EquipmentComponent implements OnInit {
   }
   
   addItem(item){
+    if (!this.equipmentList.includes(item)){
     this.equipmentList.push(item);
+    } else {
+      alert (`${item} already in equipment list!`)
+    }
   }
 
   removeItem(item){

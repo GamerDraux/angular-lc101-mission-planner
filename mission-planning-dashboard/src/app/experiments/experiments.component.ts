@@ -15,8 +15,11 @@ export class ExperimentsComponent implements OnInit {
   }
 
   addExperiment(newExperiment){
-    // tslint:disable-next-line: new-parens
-    this.experimentList.push(newExperiment);
+    if (!this.experimentList.includes(newExperiment)){
+      this.experimentList.push(newExperiment);
+    } else {
+      alert ('We already have plans to do that!');
+    }
   }
 
   switchToEditBlock(newName){
