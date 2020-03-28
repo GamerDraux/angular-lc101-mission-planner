@@ -6,33 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiments.component.css']
 })
 export class ExperimentsComponent implements OnInit {
-  experimentList:array =['Mars soil sample', 'Dig on that red sand, Baby!', 'Plant growth in habitat', 'Human bone density'];
-  experimentBeingEdited=null;
+  experimentList = ['Mars soil sample', 'Dig on that red sand, Baby!', 'Plant growth in habitat', 'Human bone density'];
+  experimentBeingEdited = null;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  addExperiment(newExperiment){
-    if (!this.experimentList.includes(newExperiment)){
+  addExperiment(newExperiment) {
+    if (!this.experimentList.includes(newExperiment)) {
       this.experimentList.push(newExperiment);
     } else {
       alert ('We already have plans to do that!');
     }
   }
 
-  switchToEditBlock(newName){
-    this.experimentBeingEdited=newName;
+  switchToEditBlock(newName) {
+    this.experimentBeingEdited = newName;
   }
 
-  editExperiment(experimentBeingEdited, newName){
+  editExperiment(experimentBeingEdited, newName) {
     const index = this.experimentList.indexOf(experimentBeingEdited);
-    this.experimentList[index]=newName;
+    this.experimentList[index] = newName;
   }
 
-  removeExperiment(remove){
+  removeExperiment(remove) {
     const index = this.experimentList.indexOf(remove);
-    this.experimentList.splice(index,1);
+    this.experimentList.splice(index, 1);
   }
 }
