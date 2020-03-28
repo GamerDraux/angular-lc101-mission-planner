@@ -1,4 +1,9 @@
 <h3>Equipment</h3>
 <ul>
     <li *ngFor='let item of equipmentList'>{{item}}</li>
+    
 </ul>
+
+<!-- user entry for equipmentList -->
+<input placeholder='New equipment here' type='text' #newItem (keyup.enter)='addItem(newItem.value)'>
+<button (click)='addItem(newItem.value)'>Add</button>

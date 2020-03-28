@@ -11,5 +11,8 @@ export class EquipmentComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  addItem(item){
+    this.equipmentList.push(item);
+  }
 }
