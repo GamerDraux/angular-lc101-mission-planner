@@ -3,6 +3,18 @@
     width: auto;
 }
 
+.nearMaxMass {
+    font-weight: bolder;
+    color: red;
+}
+
+
+
+.active {
+    background-color: aqua;
+
+}
+
 button {
     margin: 2px;
     cursor: pointer;
