@@ -8,8 +8,8 @@
 <div class="displayBox">
     <h3>Crew <span *ngIf="crew.length>=3">Full</span></h3>
     <ol>
-        <li (mouseover)="picked=astronaut" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
+        <li (mouseover)="picked=astronaut" (mouseout)="picked=null" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
     </ol>
-    <img src="showPic(picked)">
+    <img *ngIf="picked" [src]="showPic(picked)">
     
 </div>
