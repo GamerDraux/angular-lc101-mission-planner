@@ -23,4 +23,39 @@ h3 {
     text-align: center;
 }
 
+h3 {
+    font-size:3vw;
+    text-decoration: overline;
+    color: lightgray;
+}
+
+li {
+    font-size: 2vw;
+    color: lightgray;
+}
+
+::placeholder{
+    color:white;
+}
+
+input{
+    box-shadow: 3px 3px 8px black;
+}
+
+
+button{
+    color:white;
+    box-shadow: 3px 3px 8px black;
+    background-color: grey;
+}
+
+button:hover{
+    color:black;
+    background-color: white;
+}
+
+#nameEntryField {
+    background-color: gray;
+    width: 15vw;
+}
 /* Add a 'selected' class here to style selected astronaut names a different color. */

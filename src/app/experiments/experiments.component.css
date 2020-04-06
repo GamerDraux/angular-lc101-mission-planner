@@ -1,8 +1,35 @@
-.displayBox {
-    height: 275px;
-    width: auto;
+h3 {
+    font-size:3vw;
+    text-decoration: overline;
+    color: lightgray;
 }
 
-h3 {
-    text-align: center;
+li {
+    font-size: 2vw;
+    color: lightgray;
+}
+
+::placeholder{
+    color:white;
+}
+
+input{
+    box-shadow: 3px 3px 8px black;
+}
+
+button{
+    color:white;
+    width: 6vw;
+    box-shadow: 3px 3px 8px black;
+    background-color: grey;
+}
+
+button:hover{
+    color:black;
+    background-color: white;
+}
+
+#nameEntryField {
+    background-color: gray;
+    width: 15vw;
 }

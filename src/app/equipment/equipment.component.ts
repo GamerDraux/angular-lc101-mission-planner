@@ -27,6 +27,10 @@ export class EquipmentComponent implements OnInit {
    ngOnInit() { }
 
    addItem (item: object){
+     if (this.cargoHold.includes(item){
+       alert('Item already included in ship manifest!')
+     }
+     })
      this.cargoHold.push(item);
      this.cargoMass+=item["mass"];
    }

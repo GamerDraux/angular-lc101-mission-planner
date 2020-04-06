@@ -23,8 +23,51 @@ button {
 h3 {
     text-align: center;
 }
+h3 {
+    font-size:3vw;
+    text-decoration: overline;
+    color: lightgray;
+}
 
-/* Add an 'active' class to style the background of the 'Add to Cargo Hold' buttons. */
+li {
+    font-size: 2vw;
+    color: lightgray;
+}
+
+::placeholder{
+    color:white;
+}
+
+input{
+    box-shadow: 3px 3px 8px black;
+}
 
 
-/* Add the 'nearMaxMass' class style here: */
+button{
+    color:white;
+    box-shadow: 3px 3px 8px black;
+    background-color: grey;
+}
+
+button:hover{
+    color:black;
+    background-color: white;
+}
+
+#nameEntryField {
+    background-color: gray;
+    width: 15vw;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#equipmentList {
+    grid-auto-rows: auto;
+}
+
+#equipmentHold {
+    grid-auto-rows: auto;
+}

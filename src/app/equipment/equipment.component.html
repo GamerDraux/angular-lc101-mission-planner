@@ -1,4 +1,5 @@
-<div class="displayBox">
+<body>
+<div id="equipmentList" class="displayBox">
     <h3>Equipment</h3>
     <ol>
         <li *ngFor="let item of equipmentItems">
@@ -11,7 +12,7 @@
 
 <hr>
 
-<div class = "displayBox">
+<div id="equipmentHold" class = "displayBox">
     <h3>Cargo Hold: {{cargoHold.length}}/{{maxItems}} Spots Filled</h3>
     <ol>
         <li *ngFor="let equipment of cargoHold">{{equipment.name}}</li>
@@ -20,4 +21,4 @@
     <p [class.nearMaxMass]="maximumAllowedMass-cargoMass<=200">Mass Budget Remaining: {{maximumAllowedMass-cargoMass}} kg</p>
     <button (click)="cargoHold=[]; cargoMass=0;">Empty Hold</button>
 </div>
-
+</body>
